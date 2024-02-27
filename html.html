@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="/pagina15/c.css">
+</head>
+<body>
+    <div class="container">
+        <img id="lightBulb" src="/pagina15/light_off.jpg" alt="">
+        <div class="opciones">
+            <button id="toggleButton" onclick="togglelight()" >Encender foco</button>
+        </div>
+    </div>
+    <script>
+        var lightOn=false;
+        var toggleButton=document.getElementById("toggleButton");
+        function togglelight(){
+            var lightBulb=document.getElementById("lightBulb");
+            if(lightOn){
+                lightBulb.src="light_off.jpg";
+                lightOn=false;
+                toggleButton.classList.add("off");
+            }else{
+                lightBulb.src="light_on.jpg";
+                lightOn=true;
+                toggleButton.classList.add("on");
+            }
+        }
+    </script>
+</body>
+</html>
